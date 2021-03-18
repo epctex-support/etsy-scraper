@@ -34,7 +34,7 @@ The input of this scraper should be JSON containing the list of pages on Etsy th
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | startUrls | Array | (optional) List of Etsy URLs. You should only provide category detail, product detail or search URLs |
-| search | Array | (optional) Keyword that can be searched in Etsy search engine. |
+| search | String | (optional) Keyword that can be searched in Etsy search engine. |
 | endPage | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`. |
 | includeDescription | Boolean | (optional) If you want to fetch description HTML (or text) you can enable this option. Default value is `false`.  |
 | maxItems | Integer | (optional) You can limit scraped products. This should be useful when you search through the big subcategories.|
