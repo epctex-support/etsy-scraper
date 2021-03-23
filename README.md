@@ -15,11 +15,11 @@ The Etsy data scraper supports the following features:
 - Define maximum number of pages that needs to be scraped - If you only want to scrape first 3 pages, there is an option for that.
 
 
-####Etsy specific
+#### Etsy specific
 Don't worry when you get little bit different products than you saw in browser page. Etsy is ordering products differently for each user.
 
 ## Bugs, fixes, updates and changelog
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/etsy-scraper).
+This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/etsy-scraper/issues).
 
 ### Incoming Changes
 - Fetching product reviews
