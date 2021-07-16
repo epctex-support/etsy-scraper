@@ -56,9 +56,7 @@ The actor optimized to run blazing fast and scrape many as product as possible. 
 ```json
 {
 	"startUrls":[
-		{
-			"url": "https://www.etsy.com/c/clothing-and-shoes?ref=pagination&page=4"
-		}
+		"https://www.etsy.com/c/clothing-and-shoes?ref=pagination&page=4"
 	],
 	"search": "apple watch",
 	"endPage":6,
