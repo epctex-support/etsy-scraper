@@ -20,7 +20,7 @@ Don't worry when you get little bit different products than you saw in browser p
 
 ## Bugs, fixes, updates and changelog
 
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/etsy-scraper/issues).
+This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/etsy-scraper/issues).
 
 ### Incoming Changes
 
@@ -104,33 +104,48 @@ The structure of each item in Etsy products looks like this:
 
 ```json
 {
-    "id": "498417899",
-    "url": "https://www.etsy.com/listing/498417899/edc-slim-valet-pocket-organizer?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-4-29&frs=1&cns=1&col=1",
-    "name": "EDC Slim Valet - Pocket Organizer\n        Update your settings",
-    "images": [
-        "https://i.etsystatic.com/13963159/r/il/2b7207/1198502839/il_794xN.1198502839_olzc.jpg",
-        "https://i.etsystatic.com/13963159/r/il/a3c7cf/1617748881/il_794xN.1617748881_1o26.jpg",
-        "https://i.etsystatic.com/13963159/r/il/9eb645/1570294448/il_794xN.1570294448_oe8w.jpg",
-        "https://i.etsystatic.com/13963159/r/il/6b2a6a/1570293332/il_794xN.1570293332_8z6i.jpg",
-        "https://i.etsystatic.com/13963159/r/il/fe2c32/1198502863/il_794xN.1198502863_2baa.jpg",
-        "https://i.etsystatic.com/13963159/r/il/a735e6/1151892222/il_794xN.1151892222_95a2.jpg"
-    ],
-    "seller": {
-        "name": "RutsuDesigns",
-        "url": "https://www.etsy.com/shop/RutsuDesigns?ref=simple-shop-header-name&listing_id=498417899",
-        "sales": 357,
-        "rating": 5,
-        "numberOfReviews": 86
-    },
-    "variations": [
-        {
-            "label": "Color",
-            "values": ["A. Dark Chocolate ($49.00)", "B. Mahogany ($51.00)"]
-        }
-    ],
-    "highlights": ["Handmade", "Materials: leather, metal rivets"],
-    "availability": "Low in stock",
-    "listedOn": "Mar 17, 2021",
-    "favorites": 716
+	"url": "https://www.etsy.com/listing/498417899/edc-slim-valet-personalized-pocket?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-4-29&frs=1&cns=1&col=1",
+	"name": "EDC Slim Valet - Personalized Pocket Organizer, Handmade in the USA\nRegions Etsy does business in:",
+	"images": [
+		"https://i.etsystatic.com/13963159/r/il/3d1876/3180744258/il_794xN.3180744258_olzc.jpg",
+		"https://i.etsystatic.com/13963159/r/il/a3c7cf/1617748881/il_794xN.1617748881_1o26.jpg",
+		"https://i.etsystatic.com/13963159/r/il/9eb645/1570294448/il_794xN.1570294448_oe8w.jpg",
+		"https://i.etsystatic.com/13963159/r/il/6b2a6a/1570293332/il_794xN.1570293332_8z6i.jpg",
+		"https://i.etsystatic.com/13963159/r/il/39f7ad/3180744724/il_794xN.3180744724_2baa.jpg",
+		"https://i.etsystatic.com/13963159/r/il/08b20b/3180745230/il_794xN.3180745230_95a2.jpg",
+		"https://i.etsystatic.com/13963159/r/il/31e60f/3494515703/il_794xN.3494515703_54ci.jpg",
+		"https://i.etsystatic.com/13963159/r/il/352b64/3458390857/il_794xN.3458390857_4ity.jpg"
+	],
+	"seller": {
+		"name": "RutsuDesigns",
+		"url": "https://www.etsy.com/shop/RutsuDesigns?ref=simple-shop-header-name&listing_id=498417899",
+		"sales": 483,
+		"rating": 4.9375,
+		"numberOfReviews": 47
+	},
+	"Price": "$49.00+",
+	"variations": [
+		{
+			"label": "Color",
+			"values": [
+				"Dark Chocolate",
+				"Mahogany",
+				"Cordovan"
+			]
+		},
+		{
+			"label": "Personalize / Monogram",
+			"values": [
+				"None ($49.00)",
+				"Monogram ($59.00)"
+			]
+		}
+	],
+	"highlights": [
+		"Handmade",
+		"Materials: leather, metal rivets"
+	],
+	"listedOn": "Jul 12, 2022",
+	"favorites": 772
 }
 ```
