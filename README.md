@@ -27,39 +27,29 @@ This scraper is under active development. If you have any feature requests you c
 -   Fetching product reviews
 -   Fetch seller profile
 
-## Setup & Usage
-
-You can see how this actor works in this video:
-
-### Start URLs
-
-[![Apify - Etsy Scraper - Using Start URLs](https://img.youtube.com/vi/LsnuDePh-0A/0.jpg)](https://www.youtube.com/watch?v=LsnuDePh-0A)
-
-You can check the output of this video [here](https://api.apify.com/v2/datasets/OKZ3MItTB1CXqmabi/items?clean=true&format=json).
-
-### Using Search
-
-[![Apify - Etsy Scraper - Using Search ](https://img.youtube.com/vi/BdJDDQSFJnQ/0.jpg)](https://www.youtube.com/watch?v=BdJDDQSFJnQ)
-
-You can check the output of this video [here](https://api.apify.com/v2/datasets/IcDQQr47WDtbAivoy/items?clean=true&format=json).
-
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on Etsy that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages on Etsy that should be visited. Possible fields are:
 
-| Field                | Type    | Description                                                                                                        |
-| -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| startUrls            | Array   | (optional) List of Etsy URLs. You should only provide category detail, product detail, seller items or search URLs |
-| includeDescription   | Boolean | (optional) If you want to fetch description HTML (or text) you can enable this option. Default value is `false`.   |
-| maxItems             | Integer | (optional) You can limit scraped products. This should be useful when you search through the big subcategories.    |
-| endPage              | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`.                                    |
-| search               | String  | (optional) Keyword that can be searched in Etsy search engine.                                                     |
-| extendOutputFunction | String  | (optional) Function that takes a JQuery handle ($) as argument and returns object with data                        |
-| proxy                | Object  | Proxy configuration                                                                                                |
+- `search`: (Optional) (String) Keyword that can be searched in Etsy search engine.
+
+- `startUrls`: (Optional) (Array) List of Etsy URLs. You should only provide category detail, product detail, seller items or search URLs.
+
+- `includeDescription`: (Optional) (Boolean) If you want to fetch description HTML (or text) you can enable this option. Default value is `false`.
+
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
+
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+
+- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use <a href="https://www.apify.com/docs/proxy">Apify Proxy</a>.
 
-##### Tip
+### Tip
 
 When you want to have a filtering over a category URL; go to Etsy, create filters over the category and copy and paste the link as one of the **startUrl**.
 
@@ -119,9 +109,9 @@ The structure of each item in Etsy products looks like this:
 	"seller": {
 		"name": "RutsuDesigns",
 		"url": "https://www.etsy.com/shop/RutsuDesigns?ref=simple-shop-header-name&listing_id=498417899",
-		"sales": 483,
-		"rating": 4.9375,
-		"numberOfReviews": 47
+		"sales": 538,
+		"rating": 4.9583,
+		"numberOfReviews": 48
 	},
 	"Price": "$49.00+",
 	"variations": [
@@ -145,7 +135,61 @@ The structure of each item in Etsy products looks like this:
 		"Handmade",
 		"Materials: leather, metal rivets"
 	],
-	"listedOn": "Jul 12, 2022",
-	"favorites": 772
+	"listedOn": "Dec 26, 2022",
+	"favorites": 806,
+	"relatedSearches": [
+		{
+			"name": "EDC Pocket Organizer",
+			"link": "https://www.etsy.com/market/edc_pocket_organizer?ref=seller_tag_bottom_image-0"
+		},
+		{
+			"name": "EDC Wallet",
+			"link": "https://www.etsy.com/market/edc_wallet?ref=seller_tag_bottom_image-1"
+		},
+		{
+			"name": "EDC Organizer",
+			"link": "https://www.etsy.com/market/edc_organizer?ref=seller_tag_bottom_image-2"
+		},
+		{
+			"name": "EDC Pocket",
+			"link": "https://www.etsy.com/market/edc_pocket?ref=seller_tag_bottom_image-3"
+		},
+		{
+			"name": "Everyday Carry Gear",
+			"link": "https://www.etsy.com/market/everyday_carry_gear?ref=seller_tag_bottom_image-4"
+		},
+		{
+			"name": "Pocket Organizer",
+			"link": "https://www.etsy.com/market/pocket_organizer?ref=seller_tag_bottom_image-5"
+		},
+		{
+			"name": "Leather Organizer",
+			"link": "https://www.etsy.com/market/leather_organizer?ref=seller_tag_bottom_image-6"
+		},
+		{
+			"name": "EDC",
+			"link": "https://www.etsy.com/market/edc?ref=seller_tag_bottom_image-7"
+		},
+		{
+			"name": "EDC Gear",
+			"link": "https://www.etsy.com/market/edc_gear?ref=seller_tag_bottom_image-8"
+		},
+		{
+			"name": "Minimalist EDC",
+			"link": "https://www.etsy.com/market/minimalist_edc?ref=seller_tag_bottom_image-9"
+		},
+		{
+			"name": "Gift for Men",
+			"link": "https://www.etsy.com/market/gift_for_men?ref=seller_tag_bottom_image-10"
+		},
+		{
+			"name": "Holiday Gift",
+			"link": "https://www.etsy.com/market/holiday_gift?ref=seller_tag_bottom_image-11"
+		},
+		{
+			"name": "Rutsu Designs",
+			"link": "https://www.etsy.com/market/rutsu_designs?ref=seller_tag_bottom_text-0"
+		}
+	]
 }
 ```
