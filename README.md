@@ -34,7 +34,8 @@ With the last approach that is explained above you can also fetch any interval o
 
 It is recommended to keep the other options as default.
 
-![](https://cdn.epctex.com/actors/etsy/3.png)
+![](https://cdn.epctex.com/actors/etsy/4.png)
+
 
 ### Input Parameters Explained
 The input of this scraper should be JSON containing the list of pages on Etsy that should be visited. Possible fields are:
@@ -67,7 +68,7 @@ The input of this scraper should be JSON containing the list of pages on Etsy th
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://docs.apify.com/platform/proxy).
 
 ### Etsy Scraper Input Example
-![](https://cdn.epctex.com/actors/etsy/4.png)
+![](https://cdn.epctex.com/actors/etsy/3.png)
 
 ```json
 {
