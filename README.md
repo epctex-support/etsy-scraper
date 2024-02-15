@@ -1,75 +1,79 @@
-[https://apify.com/epctex/etsy-scraper](https://apify.com/epctex/etsy-scraper?fpr=yhdrb)
+# Etsy Scraper Actor
 
-# Actor - Etsy Scraper
+## What is Etsy Scraper actor?
+The Etsy Scraper actor is an advanced data extraction tool tailored for the bustling marketplace of Etsy. With no official API available, this actor serves as a crucial bridge to access a wealth of information from Etsy's database. It's designed to help you effortlessly retrieve detailed data from product listings, search results, and various categories within Etsy, offering invaluable insights for market analysis, competitive research, and strategic planning.
 
-## Etsy scraper
+### Key features
+- 📋 Product Details Scraping: Access an extensive range of product attributes including images, seller information, and listing times.
+- 🔍 Search Result Scraping: Extract data for any specific search result by keyword, giving you the flexibility to target niche markets.
+- 🗂️ Category Scraping and Filtering: Navigate and scrape through any category with custom filters to refine your search.
+- 🎛️ Controlled Scraping: Specify the number of pages you wish to scrape, from a single page to the entire category listing - If you only want to scrape the first 3 pages, there is an option for that.
 
-Since Etsy doesn't provide an API, this actor should help you to retrieve data from it.
-
-The Etsy data scraper supports the following features:
-
--   Scrape product details - You can scrape attributes like images, seller information, photos, time of listing, and many more. You can find details below.
-
--   Scrape search results - You can scrape for a specific search result by keyword.
-
--   Scrape and filter any categories - You can provide any category with any kind of filter that you want.
-
--   Define the maximum number of pages that needs to be scraped - If you only want to scrape the first 3 pages, there is an option for that.
-
-#### Etsy specific
-
-Don't worry when you get a little bit different products than you saw on the browser page. Etsy is ordering products differently for each user.
+## Use Cases | Who Can Use Etsy Scraper
+- SMBs & Entrepreneurs to conduct **comprehensive market research** and analysis.
+- Marketers & Strategists to gain **insights into customer preferences and trends**.
+- **Shoppers & Collectors** to find unique items and compare prices across the platform.
 
 ## Need to find product pairs between Etsy and another online shop?
-
-Use the [AI Product Matcher](https://apify.com/equidem/ai-product-matcher?fpr=yhdrb)🔗. This AI model allows you to compare items from different web stores, identifying exact matches and comparing real-time data obtained via web scraping. 
+Use the [AI Product Matcher🔗](https://apify.com/equidem/ai-product-matcher?fpr=yhdrb). This AI model allows you to compare items from different web stores, identifying exact matches and comparing real-time data obtained via web scraping.
 
 With the AI Product Matcher, you can use scraped product data to monitor product matches across the industry, implement dynamic pricing for your website, replace or complement manual mapping, and obtain realistic estimates against your competition for upcoming promo campaigns. Most importantly, it is relatively easy to get started with (just follow [this guide](https://blog.apify.com/product-matching-ai-pricing-intelligence-web-scraping/)) and can **match thousands of product pairs**.
 
-## Bugs, fixes, updates, and changelog
+## Input
+Either start with a keyword or specific URL to your research. You can use any product, category, keyword research, or Etsy store URL.
 
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/etsy-scraper/issues).
+💡When you want to have filtering over a category URL; go to Etsy, create filters over the category, and copy and paste the link as one of the **startUrl**.
 
-### Incoming Changes
+![](https://cdn.epctex.com/actors/etsy/1.png)
 
--   Fetching product reviews
--   Fetch seller profile
+💡If you would like to scrape only the first page of a search list or category list, then put the link for the page and have the *endPage* as 1.
 
-## Input Parameters
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a category and define the *endPage* parameter as 6 then you'll have the 5th and 6th pages only.
 
+![](https://cdn.epctex.com/actors/etsy/2.png)
+
+It is recommended to keep the other options as default.
+
+![](https://cdn.epctex.com/actors/etsy/3.png)
+
+### Input Parameters Explained
 The input of this scraper should be JSON containing the list of pages on Etsy that should be visited. Possible fields are:
 
-- `search`: (Optional) (String) Keyword that can be searched in the Etsy search engine.
+- *search*: (Optional) (String)
+Keywords that can be searched in the Etsy search engine.
+<br/>
 
-- `startUrls`: (Optional) (Array) List of Etsy URLs. You should only provide category detail, product detail, seller items, or search URLs.
+- *startUrls*: (Optional) (Array)
+List of Etsy URLs. You should only provide category details, product details, seller items, or search URLs.
+<br/>
 
-- `includeDescription`: (Optional) (Boolean) If you want to fetch description HTML (or text) you can enable this option. The default value is `false`.
+- *includeDescription*: (Optional) (Boolean)
+If you want to fetch description HTML (or text) you can enable this option. The default value is false.
+<br/>
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
+- *endPage*: (Optional) (Number)
+Final number of pages that you want to scrape. The default is Infinite. This applies to all search requests and startUrls individually.
+<br/>
 
-- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+- *maxItems*: (Optional) (Number)
+You can limit scraped items. This should be useful when you search through the big lists or search results.
+<br/>
 
-- `proxy`: (Required) (Proxy Object) Proxy configuration.
+- *proxy*: (Required) (Proxy Object)
+Proxy configuration.
+<br/>
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
+- *extendOutputFunction*: (Optional) (String)
+A function that takes a JQuery handle ($) as an argument and returns an object with data.
+<br/>
 
-- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
+- *customMapFunction*: (Optional) (String)
+A function that takes each object's handle as an argument and returns the object with executing the function.
 
-This solution requires the use of **Proxy servers**, either your own proxy servers or you can use <a href="https://www.apify.com/docs/proxy">Apify Proxy</a>.
+This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://docs.apify.com/platform/proxy).
 
-### Tip
-
-When you want to have a filtering over a category URL; go to Etsy, create filters over the category, and copy and paste the link as one of the **startUrl**.
-
-If you would like to scrape only the first page of a search list or category list, then put the link for the page and have the `endPage` as 1.
-
-With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a category and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
-
-### Compute Unit Consumption
-
-The actor is optimized to run blazing fast and scrape as many products as possible. Therefore, it forefronts all product detail requests. If the actor doesn't block very often it'll scrape 50 products in 1 minute with ~0.04-0.05 compute units.
-
-### Etsy Scraper Input example
+### Etsy Scraper Input Example
+![](https://cdn.epctex.com/actors/etsy/4.png)
 
 ```json
 {
@@ -83,21 +87,23 @@ The actor is optimized to run blazing fast and scrape as many products as possib
 }
 ```
 
-## During the Run
+### Compute Unit Consumption
+The actor is optimized to run blazing fast and scrape as many products as possible. Therefore, it forefronts all product detail requests. If the actor doesn't block very often it'll scrape 50 products in 1 minute with ~0.04-0.05 compute units.
 
-During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
-When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
+### Bugs, fixes, updates, and changelog
+This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/etsy-scraper/issues).
+
+## During the Run
+During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified. When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
 If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
-## Etsy Export
-
+### Etsy Export
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Etsy actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Amazon actor.
 
-## Scraped Etsy Products
-
+## Output
 The structure of each item in Etsy products looks like this:
 
 ```json
@@ -115,12 +121,12 @@ The structure of each item in Etsy products looks like this:
         "https://i.etsystatic.com/13963159/r/il/352b64/3458390857/il_794xN.3458390857_4ity.jpg"
     ],
     "seller": {
-        "name": "RutsuDesigns",
-        "url": "https://www.etsy.com/shop/RutsuDesigns?ref=simple-shop-header-name&listing_id=498417899",
-        "sales": 538,
-        "rating": 4.9583,
-        "numberOfReviews": 48
-    },
+		"name": "OnMyWristCo",
+		"url": "https://www.etsy.com/uk/shop/OnMyWristCo?ref=shop-header-name&listing_id=1515784194&from_page=listing",
+		"numberOfReviews": 12000,
+		"rating": 3.9179
+	},
+    "numberOfReviews": 78,
     "Price": "$49.00+",
     "variations": [
         {
@@ -201,6 +207,26 @@ The structure of each item in Etsy products looks like this:
     ]
 }
 ```
+
+### Important Note for Etsy
+Don't worry when you get a little bit different products than you saw on the browser page. Etsy is ordering products differently for each user.
+
+## How to use Etsy Scraper
+https://www.youtube.com/watch?v=MtZsDh4HZ10&ab_channel=epctex
+
+## FAQ
+
+**How do I begin scraping Etsy listings?**
+Simply input your targeted URLs or search terms into the actor, and it will navigate the Etsy marketplace to gather the data you need. 💻
+
+**Is real-time data scraping possible with Etsy Scraper?**
+Yes, Etsy Scraper can fetch real-time data, ensuring you're always informed with the most current insights. ⏱️
+
+**Can I extract and export reviews from Etsy?**
+Indeed, Etsy Scraper allows you to export customer reviews for further analysis and informed decision-making. 📊
+
+**Is it legal to scrape data from Etsy?**
+While scraping public data is generally permissible, it's crucial to adhere to Etsy's terms of service and conduct your data scraping responsibly. Avoid excessive server requests and ensure you're not infringing on any personal data privacy regulations. ⚖️
 
 ## Contact
 Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
