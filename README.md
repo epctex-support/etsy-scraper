@@ -39,36 +39,30 @@ It is recommended to keep the other options as default.
 ### Input Parameters Explained
 The input of this scraper should be JSON containing the list of pages on Etsy that should be visited. Possible fields are:
 
-- *search*: (Optional) (String)
-Keywords that can be searched in the Etsy search engine.
-<br/>
+- `search`: (Optional) (String)
 
-- *startUrls*: (Optional) (Array)
-List of Etsy URLs. You should only provide category details, product details, seller items, or search URLs.
-<br/>
+    Keywords that can be searched in the Etsy search engine.
+- `startUrls`: (Optional) (Array)
 
-- *includeDescription*: (Optional) (Boolean)
-If you want to fetch description HTML (or text) you can enable this option. The default value is false.
-<br/>
+    List of Etsy URLs. You should only provide category details, product details, seller items, or search URLs.
+- `includeDescription`: (Optional) (Boolean)
 
-- *endPage*: (Optional) (Number)
-Final number of pages that you want to scrape. The default is Infinite. This applies to all search requests and startUrls individually.
-<br/>
+    If you want to fetch description HTML (or text) you can enable this option. The default value is false.
+- `endPage`: (Optional) (Number)
 
-- *maxItems*: (Optional) (Number)
-You can limit scraped items. This should be useful when you search through the big lists or search results.
-<br/>
+    Final number of pages that you want to scrape. The default is Infinite. This applies to all search requests and startUrls individually.
+- `maxItems`: (Optional) (Number)
 
-- *proxy*: (Required) (Proxy Object)
-Proxy configuration.
-<br/>
+    You can limit scraped items. This should be useful when you search through the big lists or search results.
+- `proxy`: (Required) (Proxy Object)
 
-- *extendOutputFunction*: (Optional) (String)
-A function that takes a JQuery handle ($) as an argument and returns an object with data.
-<br/>
+    Proxy configuration.
+- `extendOutputFunction`: (Optional) (String)
 
-- *customMapFunction*: (Optional) (String)
-A function that takes each object's handle as an argument and returns the object with executing the function.
+    A function that takes a JQuery handle ($) as an argument and returns an object with data.
+- `customMapFunction`: (Optional) (String)
+
+    A function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://docs.apify.com/platform/proxy).
 
