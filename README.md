@@ -210,16 +210,16 @@ https://www.youtube.com/watch?v=MtZsDh4HZ10&ab_channel=epctex
 
 ## FAQ
 
-**How do I begin scraping Etsy listings?**
+**How do I begin scraping Etsy listings?**<br/>
 Simply input your targeted URLs or search terms into the actor, and it will navigate the Etsy marketplace to gather the data you need. 💻
 
-**Is real-time data scraping possible with Etsy Scraper?**
+**Is real-time data scraping possible with Etsy Scraper?**<br/>
 Yes, Etsy Scraper can fetch real-time data, ensuring you're always informed with the most current insights. ⏱️
 
-**Can I extract and export reviews from Etsy?**
+**Can I extract and export reviews from Etsy?**<br/>
 Indeed, Etsy Scraper allows you to export customer reviews for further analysis and informed decision-making. 📊
 
-**Is it legal to scrape data from Etsy?**
+**Is it legal to scrape data from Etsy?**<br/>
 While scraping public data is generally permissible, it's crucial to adhere to Etsy's terms of service and conduct your data scraping responsibly. Avoid excessive server requests and ensure you're not infringing on any personal data privacy regulations. ⚖️
 
 ## Contact
