@@ -1,3 +1,5 @@
+[https://apify.com/epctex/etsy-scraper](https://apify.com/epctex/etsy-scraper?fpr=yhdrb)
+
 # Etsy Scraper Actor
 
 ## What is Etsy Scraper actor?
